@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@mipmap/bj"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_system_compName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="智能签到"
+            android:textColor="#ffffff"
+            android:textSize="28dp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:nextFocusDown="@+id/btn_setnet_system"
+            android:padding="20dp"
+            android:src="@mipmap/icon_back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="36dp"
+            android:text="设备号："
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_device_no"
+            android:textSize="36dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="personManage"
+        android:layout_marginTop="30dp"
+        android:padding="40dp"
+        android:textSize="36dp"
+        android:textColor="@color/white"
+        android:text="人员管理"
+        android:background="@drawable/selector_btn_blue_rect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_sign_record"
+        android:onClick="signRecord"
+        android:layout_marginTop="30dp"
+        android:padding="40dp"
+        android:textSize="36dp"
+        android:textColor="@color/white"
+        android:text="签到记录"
+        android:background="@drawable/selector_btn_blue_rect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:visibility="gone"
+        android:onClick="systemSetting"
+        android:layout_marginTop="30dp"
+        android:padding="40dp"
+        android:textSize="36dp"
+        android:textColor="@color/white"
+        android:text="系统设置"
+        android:background="@drawable/selector_btn_blue_rect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_change_url"
+        android:onClick="changeUrl"
+        android:layout_marginTop="30dp"
+        android:padding="40dp"
+        android:textSize="36dp"
+        android:textColor="@color/white"
+        android:text="网页地址"
+        android:background="@drawable/selector_btn_blue_rect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="changePassword"
+        android:layout_marginTop="30dp"
+        android:padding="40dp"
+        android:textSize="36dp"
+        android:textColor="@color/white"
+        android:text="修改密码"
+        android:background="@drawable/selector_btn_blue_rect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_employ_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:onClick="setAngle"
+            android:text="摄像头角度"
+            android:textColor="@color/white"
+            android:background="@drawable/selector_btn_blue_rect"
+            android:padding="20dp"
+            android:id="@+id/btnAngle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:id="@+id/sw_mirror"
+            android:layout_marginLeft="30dp"
+            android:padding="20dp"
+            android:text="摄像头镜像"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

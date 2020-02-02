@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bj">
+
+    <FrameLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yunbiao.faceview.FaceView
+            android:id="@+id/face_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="#43000000"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextClock
+                android:id="@+id/textClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:format12Hour="yyyy/MM/dd  HH:mm:ss"
+                android:format24Hour="yyyy/MM/dd  HH:mm:ss"
+                android:textColor="#ffffff"
+                android:textSize="26dp" />
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/settings_icon" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

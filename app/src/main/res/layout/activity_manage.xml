@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bj"
+    android:id="@+id/rl_root">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_system_compName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="人员管理"
+            android:textColor="#ffffff"
+            android:textSize="28dp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:nextFocusDown="@+id/btn_setnet_system"
+            android:padding="20dp"
+            android:src="@mipmap/icon_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_employ_list"
+        android:layout_below="@+id/rl_title">
+
+        <Spinner
+            android:id="@+id/sp_depart"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:background="@mipmap/icon_depart_spinner"
+            android:tag="部门"
+            android:padding="2dp"></Spinner>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="top"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColorHint="@color/gray_low"
+                android:textColor="@color/white"
+                android:hint="员工名"
+                android:id="@+id/edt_query"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:textColor="@color/white"
+                android:text="搜索"
+                android:background="@drawable/shape_employ_button"
+                android:onClick="queryClick"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp" />
+        </LinearLayout>
+
+        <!--<Button
+            android:visibility="gone"
+            android:id="@+id/btn_addDepart"
+            android:layout_width="108dp"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_employ_button"
+            android:text="@string/act_employList_addDepart"
+            android:textColor="#64DCFE"
+            android:textSize="16dp"
+            android:drawableLeft="@mipmap/icon_add"
+            android:layout_toRightOf="@+id/sp_depart"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="20dp"/>-->
+
+        <Button
+            android:onClick="importRemote"
+            android:id="@+id/btn_sync"
+            android:layout_width="108dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_btn_blue_rect"
+            android:text="远程导入"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:visibility="visible"/>
+
+        <Button
+            android:onClick="importLocal"
+            android:layout_width="108dp"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_btn_blue_rect"
+            android:layout_toLeftOf="@+id/btn_sync"
+            android:layout_marginRight="10dp"
+            android:text="本地导入"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_employ_list"
+            android:layout_below="@+id/btn_sync"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="用户编号"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="姓名"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="公司名"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="部门名"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="状态"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="头像"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_below="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/lv_employ_List"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="horizontal"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    tools:context=".fragment.RecordFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginRight="15dp"
+        android:id="@+id/rlv_record"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:background="@mipmap/frame_sign_total"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:paddingRight="10dp"
+                android:gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:textSize="24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="已到"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:paddingLeft="10dp"
+                android:id="@+id/tv_already_number"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:gravity="left|center_vertical"
+                android:layout_weight="1"
+                android:textSize="24dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:paddingRight="10dp"
+                android:gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:textSize="24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="应到"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:paddingLeft="10dp"
+                android:id="@+id/tv_total_number"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:gravity="left|center_vertical"
+                android:layout_weight="1"
+                android:textSize="24dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

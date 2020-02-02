@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="wrap_content"
+    android:padding="18dp"
+    android:background="@drawable/shape_spinner_drop"
+    android:orientation="vertical">
+
+    <TextView
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:textSize="24dp" />
+
+    <View
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="24dp"
+        android:textColor="@color/gray_low"
+        android:id="@+id/tv_original_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前密码：123456" />
+
+    <EditText
+        android:textColorHint="@color/gray_low"
+        android:hint="请输入6-12位密码"
+        android:maxLength="12"
+        android:id="@+id/edt_change_pwd"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_change_pwd"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:text="确定"
+        android:textSize="24dp"
+        android:background="@drawable/selector_btn_blue_rect"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

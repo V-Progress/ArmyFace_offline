@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ArmyFace_offline</string>
+
+
+    <string name="recognize_failed_notice">DENIED:%s</string>
+    <string name="low_confidence_level">face low confidence level</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
